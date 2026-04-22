@@ -96,6 +96,15 @@
       font-size: 1.125rem; font-weight: 600; text-transform: uppercase;
       letter-spacing: 0.1em; margin-bottom: 20px;
     }
+    .accent-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .accent-pill {
+      display: inline-flex; align-items: center;
+      padding: 5px 14px; border-radius: 9999px;
+      border: 1.5px solid rgba(128,0,255,0.3);
+      background: rgba(128,0,255,0.07);
+      font-size: 0.8125rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
 
     /* ─── Hero ───────────────────────────────────────────────────── */
     .hero { padding-top: 140px; padding-bottom: 80px; }
@@ -311,9 +320,12 @@
   <div class="container hero">
     <div class="hero-grid">
       <div>
-        <div class="accent-label gt">Laboratoire · Média & Diffusion publique</div>
         <h1 class="hero-title">Laboratoire IA<br><span class="gt">Radio-Canada</span></h1>
         <p class="hero-sub">Donner à une équipe créative la permission d'expérimenter — avant de s'engager dans quoi que ce soit.</p>
+        <div class="accent-pills">
+          <span class="accent-pill gt">Laboratoire</span>
+          <span class="accent-pill gt">Média &amp; Diffusion publique</span>
+        </div>
       </div>
       <div class="float-parent" style="position:relative;">
         <div class="img-frame"><div class="img-ph" style="aspect-ratio:4/3;">[ Photo d'atelier / équipe ]</div></div>
