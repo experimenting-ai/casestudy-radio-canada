@@ -96,7 +96,7 @@
       font-size: 1.125rem; font-weight: 600; text-transform: uppercase;
       letter-spacing: 0.1em; margin-bottom: 20px;
     }
-    .accent-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .accent-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 32px; }
     .accent-pill {
       display: inline-flex; align-items: center;
       padding: 5px 14px; border-radius: 9999px;
@@ -294,12 +294,18 @@
     .footer-links a { font-size: 0.875rem; color: var(--t4); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--t1); }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .hero-grid, .content-grid, .results-grid, .sceptic-grid { grid-template-columns: 1fr; }
       .content-grid.reverse .col-text { order: 1; }
       .content-grid.reverse .col-media { order: 2; }
       .results-grid { grid-template-columns: 1fr 1fr; }
       .sceptic-card.wide { grid-column: span 1; }
+      .container, .container-narrow { padding: 0 24px; }
+      .hero { padding-top: 96px; padding-bottom: 48px; }
+      .hero-sub { font-size: 1.0625rem; max-width: 100%; }
+      .float-parent { display: none; }
+      .accent-pill { font-size: 0.75rem; padding: 4px 12px; }
+      .section { padding: 60px 0; }
     }
   </style>
 </head>
