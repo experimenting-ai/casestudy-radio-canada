@@ -34,6 +34,9 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { overflow-x: hidden; }
+
     :root {
       --base: #121212;
       --surface: #1a1a1a;
@@ -300,10 +303,10 @@
       .content-grid.reverse .col-media { order: 2; }
       .results-grid { grid-template-columns: 1fr 1fr; }
       .sceptic-card.wide { grid-column: span 1; }
-      .container, .container-narrow { padding: 0 24px; }
+      .container, .container-narrow { padding: 0 20px; }
       .hero { padding-top: 96px; padding-bottom: 48px; }
       .hero-sub { font-size: 1.0625rem; max-width: 100%; }
-      .float-parent { display: none; }
+      .hero-col-media { display: none; }
       .accent-pill { font-size: 0.75rem; padding: 4px 12px; }
       .section { padding: 60px 0; }
     }
@@ -334,7 +337,7 @@
           <span class="accent-pill"><span class="gt">Média &amp; Diffusion publique</span></span>
         </div>
       </div>
-      <div class="float-parent" style="position:relative;">
+      <div class="float-parent hero-col-media" style="position:relative;">
         <div class="img-frame"><div class="img-ph" style="aspect-ratio:4/3;">[ Photo d'atelier / équipe ]</div></div>
         <div class="float-stat" style="bottom:-16px;left:-16px;">
           <div class="float-num gt">2.5<span style="font-size:0.875rem;color:var(--t4);">/5</span></div>
