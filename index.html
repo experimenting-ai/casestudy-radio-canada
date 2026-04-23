@@ -134,6 +134,7 @@
       color: rgba(255,255,255,0.08); font-size: 12px; font-weight: 500;
       letter-spacing: 0.05em;
     }
+    .img-frame img { width: 100%; height: 100%; display: block; object-fit: cover; }
 
     /* ─── Floating stat chip ────────────────────────────────────── */
     .float-stat {
@@ -338,7 +339,7 @@
         </div>
       </div>
       <div class="float-parent hero-col-media" style="position:relative;">
-        <div class="img-frame"><div class="img-ph" style="aspect-ratio:4/3;">[ Photo d'atelier / équipe ]</div></div>
+        <div class="img-frame" style="aspect-ratio:4/3;"><img src="images/01-hero-atelier.jpg" alt="Audric Gagnon sur scène — atelier accélérateur IA avec l'équipe créative de Radio-Canada" fetchpriority="high"></div>
         <div class="float-stat" style="bottom:-16px;left:-16px;">
           <div class="float-num gt">2.5<span style="font-size:0.875rem;color:var(--t4);">/5</span></div>
           <div class="float-label">Maturité IA au départ</div>
@@ -379,7 +380,7 @@
   <!-- LE MANDAT -->
   <div class="container section">
     <div class="content-grid reverse">
-      <div class="col-text">
+      <div class="col-text" style="align-self:center;">
         <div class="accent-label" style="color:var(--t4);">Le mandat</div>
         <h2 class="col-title">Installer les bases<br>d'un projet pilote.</h2>
         <p class="col-body">Concevoir et livrer un kickoff structuré d'expérimentation IA pour une équipe créative multidisciplinaire d'ICI Musique.</p>
@@ -394,7 +395,7 @@
         </div>
       </div>
       <div class="col-media">
-        <div class="img-frame"><div class="img-ph" style="aspect-ratio:3/4;">[ Capture d'écran atelier Notion / Gamma ]</div></div>
+        <div class="img-frame" style="aspect-ratio:1/1;"><img src="images/02-mandat-cbc.jpg" alt="Audric Gagnon devant la façade de la Maison de Radio-Canada" loading="lazy"></div>
       </div>
     </div>
   </div>
@@ -413,7 +414,7 @@
         <p class="col-body">Du vrai travail créatif, sur de vrais projets, avec de vraies contraintes. Un cadre sécurisé — aucun output IA en diffusion, validation humaine obligatoire.</p>
       </div>
       <div class="col-media float-parent" style="position:relative;">
-        <div class="img-frame"><div class="img-ph" style="aspect-ratio:16/10;">[ Screenshot de travail créatif / moodboard ]</div></div>
+        <div class="img-frame" style="aspect-ratio:16/10;"><img src="images/03-ateliers-moodboard.jpg" alt="Planche de moodboard — portraits générés par l'IA pendant l'atelier" loading="lazy"></div>
         <div class="float-stat" style="bottom:12px;right:12px;">
           <div class="float-num" style="color:var(--t1);">10</div>
           <div class="float-label">Professionnels créatifs</div>
@@ -460,7 +461,7 @@
   <!-- CITATIONS MULTIPLES + IMAGE -->
   <div class="container section">
     <div class="content-grid reverse">
-      <div class="col-text">
+      <div class="col-text" style="align-self:center;">
         <div class="quotes-stack">
           <div class="quote-sm">
             <div class="quote-sm-text">« On est arrivés en pensant qu'un outil ferait tout. On est repartis en sachant qu'il faut les combiner — et c'est ça qui a tout changé. »</div>
@@ -472,8 +473,8 @@
           </div>
         </div>
       </div>
-      <div class="col-media">
-        <div class="img-frame"><div class="img-ph" style="aspect-ratio:4/5;">[ Photo ou visuel créatif produit pendant l'atelier ]</div></div>
+      <div class="col-media" style="align-self:center;">
+        <div class="img-frame" style="aspect-ratio:4/5;max-width:420px;margin:0 auto;"><img src="images/04-ohdio-campagne.jpg" alt="Pitch de campagne ICI Musique — Ohdio plaisir pur et vibrations" loading="lazy"></div>
       </div>
     </div>
   </div>
