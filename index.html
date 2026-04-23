@@ -307,7 +307,11 @@
       .container, .container-narrow { padding: 0 20px; }
       .hero { padding-top: 96px; padding-bottom: 48px; }
       .hero-sub { font-size: 1.0625rem; max-width: 100%; }
-      .hero-col-media { display: none; }
+      .hero-col-media { order: -1; }
+      .hero-col-media .img-frame { aspect-ratio: 16/9 !important; }
+      .float-stat { transform: scale(0.85); }
+      .float-stat[style*="bottom:-16px;left:-16px"] { bottom: -10px !important; left: -6px !important; }
+      .float-stat[style*="top:-12px;right:-12px"] { top: -8px !important; right: -6px !important; }
       .accent-pill { font-size: 0.75rem; padding: 4px 12px; }
       .section { padding-top: 60px; padding-bottom: 60px; }
     }
