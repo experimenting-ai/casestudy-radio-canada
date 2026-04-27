@@ -248,7 +248,9 @@
       background: rgba(128,0,255,0.15); border: 1px solid rgba(128,0,255,0.25);
       display: flex; align-items: center; justify-content: center;
       font-size: 1rem; font-weight: 600; color: #c084fc;
+      overflow: hidden;
     }
+    .quote-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .quote-name { font-weight: 600; color: var(--t1); font-size: 0.9375rem; font-feature-settings: "calt" 1; }
     .quote-role { font-size: 0.8125rem; color: var(--t4); }
 
@@ -465,7 +467,7 @@
     <div class="quote-block">
       <div class="quote-text">« Ça a vraiment été un électrochoc pour partir de notre projet. Je sens que ça a vraiment motivé et allumé l'équipe. Je n'ai vraiment pas entendu de personnes réticentes. »</div>
       <div class="quote-attr">
-        <div class="quote-avatar">MÈ</div>
+        <div class="quote-avatar"><img src="images/marie-eve_tremblay.jpeg" alt="Portrait de Marie-Ève Tremblay" loading="lazy"></div>
         <div><div class="quote-name">Marie-Ève Tremblay</div><div class="quote-role">Radio-Canada</div></div>
       </div>
     </div>
