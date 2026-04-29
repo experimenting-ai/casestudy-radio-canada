@@ -292,106 +292,6 @@
     .tool-pill:hover { border-color: var(--border-dark-hover); }
     .pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
 
-    /* ─── Method 3-phase grid ───────────────────────────────────── */
-    .method-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 14px; margin-top: 40px;
-    }
-    .method-card {
-      background: rgba(255,255,255,0.025); border: 1px solid var(--border-dark);
-      border-radius: 16px; padding: 32px 28px;
-      transition: border-color 0.2s;
-    }
-    .method-card:hover { border-color: var(--border-dark-hover); }
-    .method-step {
-      font-family: var(--font-mono); font-size: 0.75rem;
-      color: var(--t4); text-transform: uppercase; letter-spacing: 0.1em;
-      margin-bottom: 18px;
-    }
-    .method-title {
-      font-size: 1.625rem; font-weight: 700; letter-spacing: -0.5px;
-      margin-bottom: 16px; line-height: 1.1;
-      font-feature-settings: "calt" 1, "kern" 1, "cv01" 1, "ss03" 1;
-    }
-    .method-body {
-      font-size: 0.9375rem; color: var(--t2); line-height: 1.6;
-      font-feature-settings: "calt" 1;
-    }
-
-    /* ─── Stat strip — big numerical proof ──────────────────────── */
-    .stat-strip {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 14px; margin-top: 32px;
-    }
-    .strip-card {
-      text-align: center;
-      background: rgba(255,255,255,0.025); border: 1px solid var(--border-dark);
-      border-radius: 16px; padding: 36px 24px;
-      transition: border-color 0.2s;
-    }
-    .strip-card:hover { border-color: var(--border-dark-hover); }
-    .strip-num {
-      font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700;
-      letter-spacing: -1.5px; margin-bottom: 8px; line-height: 1;
-    }
-    .strip-label {
-      font-size: 0.8125rem; color: var(--t3);
-      text-transform: uppercase; letter-spacing: 0.08em;
-    }
-
-    /* ─── Refused grid — positioning by contrast ────────────────── */
-    .refused-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 14px; margin-top: 40px;
-    }
-    .refused-card {
-      background: rgba(255,255,255,0.02); border: 1px solid var(--border-dark);
-      border-radius: 16px; padding: 28px 24px;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .refused-card:hover {
-      border-color: var(--border-dark-hover);
-      background: rgba(255,255,255,0.035);
-    }
-    .refused-tag {
-      display: inline-block; font-family: var(--font-mono);
-      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em;
-      text-transform: uppercase; color: var(--t1);
-      padding: 4px 10px; border-radius: 9999px;
-      border: 1.5px solid rgba(128,0,255,0.3);
-      background: rgba(128,0,255,0.07);
-      margin-bottom: 16px;
-    }
-    .refused-body {
-      font-size: 0.9375rem; color: var(--t2); line-height: 1.6;
-      font-feature-settings: "calt" 1;
-    }
-
-    /* ─── Framework grid — 4×2 (8 pratiques) ────────────────────── */
-    .framework-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 14px; margin-top: 40px;
-    }
-    .framework-card {
-      background: rgba(255,255,255,0.025); border: 1px solid var(--border-dark);
-      border-radius: 14px; padding: 22px 20px;
-      transition: border-color 0.2s;
-    }
-    .framework-card:hover { border-color: var(--border-dark-hover); }
-    .framework-num {
-      font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600;
-      letter-spacing: 0.1em; margin-bottom: 12px;
-    }
-    .framework-title {
-      font-size: 0.9375rem; font-weight: 600; color: var(--t1);
-      margin-bottom: 8px; letter-spacing: -0.2px; line-height: 1.25;
-      font-feature-settings: "calt" 1;
-    }
-    .framework-body {
-      font-size: 0.8125rem; color: var(--t3); line-height: 1.55;
-      font-feature-settings: "calt" 1;
-    }
-
     /* ─── Insight section (centered) ─────────────────────────────── */
     .insight-block { text-align: center; max-width: 896px; margin: 0 auto; }
     .insight-title {
@@ -435,10 +335,6 @@
       .content-grid.reverse .col-media { order: 2; }
       .results-grid { grid-template-columns: 1fr 1fr; }
       .sceptic-card.wide { grid-column: span 1; }
-      .method-grid, .refused-grid { grid-template-columns: 1fr; }
-      .stat-strip { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-      .strip-card { padding: 24px 12px; }
-      .framework-grid { grid-template-columns: 1fr 1fr; }
       .container, .container-narrow { padding: 0 20px; }
       .hero { padding-top: 96px; padding-bottom: 48px; }
       .hero-sub { font-size: 1.0625rem; max-width: 100%; }
@@ -447,7 +343,6 @@
       .float-stat { transform: scale(0.85); }
       .float-stat[style*="bottom:-16px;left:-16px"] { bottom: -10px !important; left: -6px !important; }
       .float-stat[style*="top:-12px;right:-12px"] { top: -8px !important; right: -6px !important; }
-      .float-stat[style*="bottom:-16px;right:-16px"] { bottom: -10px !important; right: -6px !important; }
       .accent-pill { font-size: 0.75rem; padding: 4px 12px; }
       .section { padding-top: 60px; padding-bottom: 60px; }
     }
@@ -488,10 +383,6 @@
           <div class="float-num gt">87.5%</div>
           <div class="float-label">Confiants après</div>
         </div>
-        <div class="float-stat" style="bottom:-16px;right:-16px;">
-          <div class="float-num gt">30-40%</div>
-          <div class="float-label">du temps perdu avant</div>
-        </div>
       </div>
     </div>
   </div>
@@ -506,9 +397,9 @@
       <div class="col-text">
         <div class="accent-label" style="color:var(--t4);">Le contexte</div>
         <h2 class="col-title">Curieux.<br>Bloqués.</h2>
-        <p class="col-body">Une équipe créative complète — designers, réalisateurs, motion designers, conceptrice-rédactrice, directrice de création. Dix profils qui testaient l'IA chacun dans leur coin depuis des mois.</p>
-        <p class="col-body">80 % ne faisaient pas confiance aux résultats. 70 % l'utilisaient quand même. Les sceptiques freinaient sans le dire. Les curieux avançaient sans cadre.</p>
-        <p class="col-body">Cette tension-là ne se règle pas avec un canal Slack ou une présentation. Ça prend quelqu'un dans la pièce.</p>
+        <p class="col-body">Designers, motion designers, réalisateurs, conceptrice-rédactrice, directrice de création — dix profils qui testaient l'IA chacun dans leur coin depuis des mois. Chacun avec ses outils, ses doutes, ses petites victoires silencieuses.</p>
+        <p class="col-body">Mais 80 % ne faisaient pas confiance aux résultats. Et 70 % les utilisaient déjà quand même.</p>
+        <p class="col-body">Cette tension-là ne se règle pas avec un canal Slack ou un Notion partagé. Ça prend quelqu'un dans la pièce.</p>
       </div>
       <div class="col-media" style="display:flex;flex-direction:column;gap:12px;">
         <div class="stat-card"><div class="stat-num gt">80%</div><div class="stat-desc">ne faisaient pas confiance aux résultats IA</div></div>
@@ -527,8 +418,9 @@
       <div class="col-text" style="align-self:center;">
         <div class="accent-label" style="color:var(--t4);">Le mandat</div>
         <h2 class="col-title">Aligner avant<br>de lancer.</h2>
-        <p class="col-body">Avant qu'un projet pilote IA de six mois démarre, l'équipe avait besoin d'un point de départ commun. Pas une formation. Pas un kickoff inspirant. Un cadre de travail.</p>
-        <p class="col-body" style="margin-bottom:24px;">J'ai conçu <strong style="color:var(--t1);">La Méthode Laboratoire</strong> pour ça — deux journées structurées qui transforment la curiosité individuelle en posture d'équipe, sur un terrain de jeu réel. Validation humaine à chaque étape. Aucune diffusion. Cadre sécurisé.</p>
+        <p class="col-body">Avant de lancer un projet pilote IA de 6 mois, l'équipe avait besoin d'un point de départ commun.</p>
+        <p class="col-body">Mon rôle : faire le pont entre la curiosité individuelle et la posture d'équipe. Donner la permission d'expérimenter — explicitement. Cadrer la friction. Sortir les sceptiques de leur tranchée sans forcer personne.</p>
+        <p class="col-body" style="margin-bottom:24px;">Pas une démo. Pas une formation théorique. Un laboratoire — sur un vrai brief ICI Musique, avec validation humaine obligatoire à chaque étape.</p>
         <div class="pill-row">
           <div class="tool-pill">ChatGPT</div>
           <div class="tool-pill">Midjourney</div>
@@ -548,86 +440,21 @@
   <div class="container"><div class="divider"></div></div>
 
 
-  <!-- LA MÉTHODE LABORATOIRE -->
+  <!-- LES ATELIERS -->
   <div class="container section">
-    <div class="accent-label gt">La Méthode Laboratoire</div>
-    <h2 class="col-title" style="max-width:720px;">Trois temps. Une posture<br>qui change pour de bon.</h2>
-    <p class="col-body" style="max-width:680px;">Pas une formation. Pas un workshop. Une méthode qu'on a affinée mandat après mandat — et qu'une équipe peut réappliquer sans nous.</p>
-    <div class="method-grid">
-      <div class="method-card">
-        <div class="method-step">Jour 1</div>
-        <div class="method-title gt">Désarmer.</div>
-        <div class="method-body">On entre par un vrai brief client. Pas un cas fictif, pas une démo. Le scepticisme tombe quand l'enjeu est réel.</div>
+    <div class="content-grid">
+      <div class="col-text">
+        <div class="accent-label" style="color:var(--t4);">Les ateliers</div>
+        <h2 class="col-title">Du vrai travail créatif.<br>Pas des démos.</h2>
+        <p class="col-body">Deux journées intensives. Trois sous-groupes travaillant sur un vrai brief pour ICI Musique — du brainstorm à la pré-production assistée par l'IA.</p>
+        <p class="col-body">Du vrai travail créatif, sur de vrais projets, avec de vraies contraintes. Un cadre sécurisé — aucun output IA en diffusion, validation humaine obligatoire.</p>
       </div>
-      <div class="method-card">
-        <div class="method-step">Entre les deux</div>
-        <div class="method-title gt">Mettre les mains dedans.</div>
-        <div class="method-body">Chacun retourne dans son rôle avec un défi sur son propre travail. La théorie ne survit pas à un week-end. La pratique, oui.</div>
-      </div>
-      <div class="method-card">
-        <div class="method-step">Jour 2</div>
-        <div class="method-title gt">Livrer.</div>
-        <div class="method-body">On sort avec un livrable défendable, pas une certification. La preuve de concept est dans la pièce, pas dans un PDF.</div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="container"><div class="divider"></div></div>
-
-
-  <!-- TROIS CHOSES QU'ON A REFUSÉ -->
-  <div class="container section">
-    <div class="accent-label" style="color:var(--t4);">Pour comprendre ce qu'est la Méthode</div>
-    <h2 class="col-title" style="margin-bottom:8px;">Regarde ce qu'elle n'est pas.</h2>
-    <p class="col-body" style="max-width:640px;">Trois raccourcis qu'on a refusés. Et c'est exactement pour ça que ça a marché.</p>
-    <div class="refused-grid">
-      <div class="refused-card">
-        <span class="refused-tag">Pas de théorie</span>
-        <div class="refused-body">On n'a pas expliqué l'IA. On l'a fait travailler sur un brief client réel, dès la première heure.</div>
-      </div>
-      <div class="refused-card">
-        <span class="refused-tag">Pas de cas d'école</span>
-        <div class="refused-body">On a repris un brief déjà exécuté par l'équipe — pour qu'ils puissent mesurer la différence eux-mêmes.</div>
-      </div>
-      <div class="refused-card">
-        <span class="refused-tag">Pas de spectateurs</span>
-        <div class="refused-body">Pas de démo passive. Tout le monde produit, même les sceptiques. Surtout les sceptiques.</div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="container"><div class="divider"></div></div>
-
-
-  <!-- CE QU'ILS ONT PRODUIT -->
-  <div class="container section">
-    <div class="content-grid reverse">
-      <div class="col-text" style="align-self:center;">
-        <div class="accent-label gt">Ce qu'ils ont produit</div>
-        <h2 class="col-title">Trente livrables.<br>Deux jours.</h2>
-        <p class="col-body">La preuve, ce n'est pas qu'ils ont aimé. C'est ce qu'ils ont produit — et combien plus vite.</p>
-        <p class="col-body">Trois équipes. Un brief client réel, déjà exécuté avant le lab — donc un point de comparaison concret pour chaque participant.</p>
-        <p class="col-body">À la sortie : des concepts défendables, des visuels finis dans plusieurs formats, des films courts, des stratégies de diffusion, des textes prêts. Tout assemblé en dossier de pitch interne.</p>
-        <p class="col-body">L'IA n'a remplacé personne. Elle a permis de boucler en 48 heures ce qui prend habituellement des semaines — sous validation humaine, à chaque étape, en circuit fermé.</p>
-      </div>
-      <div class="col-media">
-        <div class="img-frame" style="aspect-ratio:16/10;"><img src="images/03-ateliers-moodboard.jpg" alt="Planche de moodboard générée pendant le laboratoire IA — équipe créative de Radio-Canada" loading="lazy"></div>
-      </div>
-    </div>
-    <div class="stat-strip">
-      <div class="strip-card">
-        <div class="strip-num gt">≈30</div>
-        <div class="strip-label">Livrables produits</div>
-      </div>
-      <div class="strip-card">
-        <div class="strip-num gt">3</div>
-        <div class="strip-label">Équipes en parallèle</div>
-      </div>
-      <div class="strip-card">
-        <div class="strip-num gt">2</div>
-        <div class="strip-label">Jours, pas plus</div>
+      <div class="col-media float-parent" style="position:relative;">
+        <div class="img-frame" style="aspect-ratio:16/10;"><img src="images/03-ateliers-moodboard.jpg" alt="Planche de moodboard générée par Midjourney — atelier IA pratique avec l'équipe créative de Radio-Canada" loading="lazy"></div>
+        <div class="float-stat" style="bottom:12px;right:12px;">
+          <div class="float-num gt">≈30</div>
+          <div class="float-label">Livrables produits</div>
+        </div>
       </div>
     </div>
   </div>
@@ -660,59 +487,6 @@
       <div class="result-card"><div class="result-num gt">100%</div><div class="result-desc">des sceptiques sont passés à l'action</div></div>
       <div class="result-card"><div class="result-num gt">100%</div><div class="result-desc">repartent avec des idées concrètes d'intégration dans leur travail</div></div>
       <div class="result-card"><div class="result-num gt">100%</div><div class="result-desc">veulent continuer à développer leurs compétences IA</div></div>
-    </div>
-  </div>
-
-
-  <div class="container"><div class="divider"></div></div>
-
-
-  <!-- LE CADRE QUI RESTE -->
-  <div class="container section">
-    <div class="accent-label gt">Le cadre qui reste</div>
-    <h2 class="col-title" style="max-width:760px;">Pas une formation.<br>Un référentiel.</h2>
-    <p class="col-body" style="max-width:680px;">La Méthode Laboratoire ne livre pas un souvenir. Elle livre un cadre — huit pratiques qu'une équipe créative peut réappliquer en autonomie, longtemps après notre départ.</p>
-    <div class="framework-grid">
-      <div class="framework-card">
-        <div class="framework-num gt">01</div>
-        <div class="framework-title">Le brief « parfait » assisté par IA</div>
-        <div class="framework-body">Synthétiser le modèle idéal à partir des briefs passés. Plus rien d'oublié.</div>
-      </div>
-      <div class="framework-card">
-        <div class="framework-num gt">02</div>
-        <div class="framework-title">Brainstorming augmenté</div>
-        <div class="framework-body">Des assistants qui connaissent la marque, le rôle, la philosophie créative.</div>
-      </div>
-      <div class="framework-card">
-        <div class="framework-num gt">03</div>
-        <div class="framework-title">Archivage intelligent des sessions</div>
-        <div class="framework-body">Transcription, synthèse, analyse. Plus rien ne se perd entre les rencontres.</div>
-      </div>
-      <div class="framework-card">
-        <div class="framework-num gt">04</div>
-        <div class="framework-title">Assistants de rôles personnalisés</div>
-        <div class="framework-body">Réalisation, conception, motion — l'IA répond comme un membre de l'équipe.</div>
-      </div>
-      <div class="framework-card">
-        <div class="framework-num gt">05</div>
-        <div class="framework-title">Assistant de normes de marque</div>
-        <div class="framework-body">Le cahier graphique, interrogeable comme un collègue.</div>
-      </div>
-      <div class="framework-card">
-        <div class="framework-num gt">06</div>
-        <div class="framework-title">Validation et auto-critique avec l'IA</div>
-        <div class="framework-body">Une couche de vérification avant l'humain. Moins d'allers-retours.</div>
-      </div>
-      <div class="framework-card">
-        <div class="framework-num gt">07</div>
-        <div class="framework-title">Banque de prompts standard</div>
-        <div class="framework-body">Les meilleures formulations, partagées. Personne ne réinvente la roue.</div>
-      </div>
-      <div class="framework-card">
-        <div class="framework-num gt">08</div>
-        <div class="framework-title">Systématisation de l'expérimentation</div>
-        <div class="framework-body">Tester n'est plus une exception. C'est la routine.</div>
-      </div>
     </div>
   </div>
 
@@ -790,9 +564,9 @@
   <!-- CTA -->
   <div class="container section">
     <div class="cta-block">
-      <h2 class="cta-title">Tu diriges une équipe créative qui veut adopter l'IA — mais qui ne sait pas par où commencer?</h2>
-      <p class="cta-sub">On en jase 30 minutes. Pas de pitch. Pas de pression. Juste une conversation pour voir si La Méthode Laboratoire s'applique à ton contexte.</p>
-      <a href="https://bit.ly/audric-30min" class="btn-primary" target="_blank" rel="noopener">Réserver 30 minutes &#8594;</a>
+      <h2 class="cta-title">Envie de bâtir quelque chose de similaire?</h2>
+      <p class="cta-sub">Pas de pitch. Pas de pression. Juste une conversation.</p>
+      <a href="#" class="btn-primary">Commencer une conversation &#8594;</a>
     </div>
   </div>
 
