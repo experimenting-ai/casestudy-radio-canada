@@ -3,6 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    ============================================================================
+    TODO — À RÉGLER AVANT MISE EN LIGNE PUBLIQUE
+    ============================================================================
+    Cette page est actuellement privée (link-only, noindex). Avant de la
+    rendre publique ou de l'intégrer sur experimenting.ai, vérifier :
+
+    1. SEO / partage social
+       - Retirer <meta name="robots" content="noindex, nofollow"> (ligne ~10)
+       - Générer images/og-cover.jpg (1200×630) — actuellement 404 sur tout
+         partage Slack/LinkedIn/WhatsApp (référencé lignes ~17 et ~29)
+       - Vérifier que canonical et og:url pointent vers l'URL finale
+         (actuellement casestudy-radio-canada.vercel.app)
+
+    2. CTAs / liens — tous href="#" en attendant l'intégration sur le site
+       - Bouton "Commencer une conversation" → bit.ly/audler-30min ou mailto
+       - Nav "← Retour au Lab" → URL du Lab
+       - Liens footer : Lab / Services / Contact
+       - Bouton FR/EN : décoratif, aucun handler — décider si on garde ou retire
+
+    3. Contenu
+       - Réviser la copy une dernière fois (voir audit Tier 3)
+    ============================================================================
+  -->
   <title>Laboratoire IA Radio-Canada — Étude de cas | experimenting.ai</title>
   <meta name="description" content="Comment experimenting.ai a aidé l'équipe créative de Radio-Canada à adopter l'IA en toute confiance : de 80 % de scepticisme à 87,5 % de confiance en deux jours d'ateliers pratiques.">
   <meta name="author" content="experimenting.ai">
@@ -61,7 +85,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { overflow-x: hidden; }
@@ -152,18 +176,29 @@
       letter-spacing: 0.01em; font-feature-settings: "calt" 1;
       max-width: 480px;
     }
+    .hero-meta {
+      font-family: var(--font-mono);
+      font-size: 0.75rem; color: var(--t4);
+      letter-spacing: 0.06em; text-transform: uppercase;
+      margin-top: 24px;
+    }
 
-    /* ─── Image placeholder ─────────────────────────────────────── */
+    /* ─── Image frame ────────────────────────────────────────────── */
     .img-frame {
       border-radius: 16px; overflow: hidden; position: relative;
       background: var(--surface); border: 1px solid var(--border-dark);
     }
-    .img-ph {
-      width: 100%; display: flex; align-items: center; justify-content: center;
-      color: rgba(255,255,255,0.08); font-size: 12px; font-weight: 500;
-      letter-spacing: 0.05em;
-    }
     .img-frame img { width: 100%; height: 100%; display: block; object-fit: cover; }
+
+    /* ─── Skip link (a11y) ───────────────────────────────────────── */
+    .skip-link {
+      position: absolute; top: -48px; left: 12px; z-index: 100;
+      background: var(--t1); color: var(--base);
+      padding: 10px 16px; border-radius: 8px;
+      font-size: 0.875rem; font-weight: 600; text-decoration: none;
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus { top: 12px; outline: 2px solid var(--t1); outline-offset: 2px; }
 
     /* ─── Floating stat chip ────────────────────────────────────── */
     .float-stat {
@@ -299,6 +334,7 @@
       line-height: 1.15; letter-spacing: -1px; margin-bottom: 20px;
       font-feature-settings: "calt" 1, "kern" 1, "cv01" 1, "ss03" 1;
     }
+    .insight-title .gt { display: block; margin-top: 0.4em; }
     .insight-sub { font-size: 1.125rem; color: var(--t3); font-feature-settings: "calt" 1; }
 
     /* ─── CTA ────────────────────────────────────────────────────── */
@@ -350,31 +386,40 @@
 </head>
 <body>
 
+  <a href="#main" class="skip-link">Aller au contenu</a>
+
   <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <div data-logo data-logo-h="22" data-logo-fill="#ffffff"></div>
-      <div class="nav-right">
-        <a href="#" class="nav-back">&#8592; Retour au Lab</a>
-        <button class="nav-lang">FR</button>
+  <header>
+    <nav class="nav" aria-label="Navigation principale">
+      <div class="nav-inner">
+        <div data-logo data-logo-h="22" data-logo-fill="#ffffff"></div>
+        <div class="nav-right">
+          <a href="#" class="nav-back"><span aria-hidden="true">&#8592;</span> Retour au Lab</a>
+          <button class="nav-lang" type="button" aria-label="Changer de langue">FR</button>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
+
+
+  <main id="main">
+  <article>
 
 
   <!-- HERO -->
-  <div class="container hero">
+  <header class="container hero">
     <div class="hero-grid">
       <div>
         <h1 class="hero-title">Laboratoire IA<br><span class="gt">Radio-Canada</span></h1>
-        <p class="hero-sub">Donner à une équipe créative la permission d'expérimenter — avant de s'engager dans quoi que ce soit.</p>
+        <p class="hero-sub">Donner à une équipe créative la permission d'expérimenter — l'électrochoc qui débloque tout, en deux jours.</p>
+        <p class="hero-meta">2 jours · 10 créatifs · ICI Musique · Kickoff IA</p>
         <div class="accent-pills">
           <span class="accent-pill"><span class="gt">Laboratoire</span></span>
           <span class="accent-pill"><span class="gt">Média &amp; Diffusion publique</span></span>
         </div>
       </div>
       <div class="float-parent hero-col-media" style="position:relative;">
-        <div class="img-frame" style="aspect-ratio:4/3;"><img src="images/01-hero-atelier.jpg" alt="Audric Gagnon sur scène — atelier accélérateur IA avec l'équipe créative de Radio-Canada" fetchpriority="high"></div>
+        <div class="img-frame" style="aspect-ratio:4/3;"><img src="images/01-hero-atelier.jpg" alt="Marie-Ève Tremblay (Radio-Canada) ouvrant l'atelier accélérateur IA devant son équipe créative" width="1600" height="1200" fetchpriority="high"></div>
         <div class="float-stat" style="bottom:-16px;left:-16px;">
           <div class="float-num gt">2.5<span style="font-size:0.875rem;color:var(--t4);">/5</span></div>
           <div class="float-label">Maturité IA au départ</div>
@@ -385,14 +430,14 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
 
   <div class="container"><div class="divider"></div></div>
 
 
   <!-- LE CONTEXTE -->
-  <div class="container section">
+  <section class="container section">
     <div class="content-grid">
       <div class="col-text">
         <div class="accent-label" style="color:var(--t4);">Le contexte</div>
@@ -406,20 +451,20 @@
         <div class="stat-card"><div class="stat-num gt">30-40%</div><div class="stat-desc">du temps perdu en déclinaisons multi-formats</div></div>
       </div>
     </div>
-  </div>
+  </section>
 
 
   <div class="container"><div class="divider"></div></div>
 
 
   <!-- LE MANDAT -->
-  <div class="container section">
+  <section class="container section">
     <div class="content-grid reverse">
       <div class="col-text" style="align-self:center;">
         <div class="accent-label" style="color:var(--t4);">Le mandat</div>
         <h2 class="col-title">Installer les bases<br>d'un projet pilote.</h2>
         <p class="col-body">Concevoir et livrer un kickoff structuré d'expérimentation IA pour une équipe créative multidisciplinaire d'ICI Musique.</p>
-        <p class="col-body" style="margin-bottom:24px;">L'objectif : aligner l'équipe, créer un élan, et installer les bases d'un projet pilote IA de 6 mois — le tout dans un environnement sécurisé.</p>
+        <p class="col-body" style="margin-bottom:24px;">L'objectif : aligner l'équipe, créer l'élan et donner le coup d'envoi à un pilote IA de 6 mois — pris en charge ensuite par Radio-Canada à l'interne, dans un environnement sécurisé.</p>
         <div class="pill-row">
           <div class="tool-pill">ChatGPT</div>
           <div class="tool-pill">Midjourney</div>
@@ -430,17 +475,17 @@
         </div>
       </div>
       <div class="col-media">
-        <div class="img-frame" style="aspect-ratio:1/1;"><img src="images/02-mandat-cbc.jpg" alt="Audric Gagnon devant la Maison de Radio-Canada — mandat d'accompagnement IA pour l'équipe créative d'ICI Musique" loading="lazy"></div>
+        <div class="img-frame" style="aspect-ratio:1/1;"><img src="images/02-mandat-cbc.jpg" alt="Audric Gagnon devant la Maison de Radio-Canada — mandat d'accompagnement IA pour l'équipe créative d'ICI Musique" width="1600" height="1600" loading="lazy"></div>
       </div>
     </div>
-  </div>
+  </section>
 
 
   <div class="container"><div class="divider"></div></div>
 
 
   <!-- LES ATELIERS -->
-  <div class="container section">
+  <section class="container section">
     <div class="content-grid">
       <div class="col-text">
         <div class="accent-label" style="color:var(--t4);">Les ateliers</div>
@@ -449,52 +494,52 @@
         <p class="col-body">Du vrai travail créatif, sur de vrais projets, avec de vraies contraintes. Un cadre sécurisé — aucun output IA en diffusion, validation humaine obligatoire.</p>
       </div>
       <div class="col-media float-parent" style="position:relative;">
-        <div class="img-frame" style="aspect-ratio:16/10;"><img src="images/03-ateliers-moodboard.jpg" alt="Planche de moodboard générée par Midjourney — atelier IA pratique avec l'équipe créative de Radio-Canada" loading="lazy"></div>
+        <div class="img-frame" style="aspect-ratio:16/10;"><img src="images/03-ateliers-moodboard.jpg" alt="Planche de moodboard générée par Midjourney — atelier IA pratique avec l'équipe créative de Radio-Canada" width="1165" height="1600" loading="lazy"></div>
         <div class="float-stat" style="bottom:12px;right:12px;">
           <div class="float-num gt">≈30</div>
           <div class="float-label">Livrables produits</div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
 
   <div class="container"><div class="divider"></div></div>
 
 
   <!-- CITATION PRINCIPALE -->
-  <div class="container-narrow section">
+  <section class="container-narrow section">
     <div class="quote-block">
       <div class="quote-text">« Ça a vraiment été un électrochoc pour partir de notre projet. Je sens que ça a vraiment motivé et allumé l'équipe. Je n'ai vraiment pas entendu de personnes réticentes. »</div>
       <div class="quote-attr">
-        <div class="quote-avatar"><img src="images/marie-eve_tremblay.jpeg" alt="Portrait de Marie-Ève Tremblay" loading="lazy"></div>
+        <div class="quote-avatar"><img src="images/marie-eve_tremblay.jpeg" alt="Portrait de Marie-Ève Tremblay" width="800" height="800" loading="lazy"></div>
         <div><div class="quote-name">Marie-Ève Tremblay</div><div class="quote-role">Radio-Canada</div></div>
       </div>
     </div>
-  </div>
+  </section>
 
 
   <div class="container"><div class="divider"></div></div>
 
 
   <!-- RÉSULTATS -->
-  <div class="container section">
+  <section class="container section">
     <div class="accent-label gt">Résultats post-formation</div>
     <h2 class="col-title" style="margin-bottom:40px;">Les chiffres parlent<br>d'eux-mêmes.</h2>
     <div class="results-grid">
       <div class="result-card"><div class="result-num gt">87.5%</div><div class="result-desc">se sentent confiants ou très confiants pour utiliser l'IA seuls</div></div>
-      <div class="result-card"><div class="result-num gt">0%</div><div class="result-desc">de scepticisme post-formation — personne n'est ressorti plus négatif</div></div>
+      <div class="result-card"><div class="result-num gt">0%</div><div class="result-desc">de scepticisme post-formation — chaque participant a basculé du côté positif</div></div>
       <div class="result-card"><div class="result-num gt">100%</div><div class="result-desc">repartent avec des idées concrètes d'intégration dans leur travail</div></div>
       <div class="result-card"><div class="result-num gt">100%</div><div class="result-desc">veulent continuer à développer leurs compétences IA</div></div>
     </div>
-  </div>
+  </section>
 
 
   <div class="container"><div class="divider"></div></div>
 
 
   <!-- CITATIONS MULTIPLES + IMAGE -->
-  <div class="container section">
+  <section class="container section">
     <div class="content-grid reverse">
       <div class="col-text" style="align-self:center;">
         <div class="quotes-stack">
@@ -509,19 +554,19 @@
         </div>
       </div>
       <div class="col-media" style="align-self:center;">
-        <div class="img-frame" style="aspect-ratio:4/5;max-width:420px;margin:0 auto;"><img src="images/04-ohdio-campagne.jpg" alt="Résultat d'atelier IA — pitch de campagne ICI Musique Ohdio, produit par l'équipe créative de Radio-Canada" loading="lazy"></div>
+        <div class="img-frame" style="aspect-ratio:4/5;max-width:420px;margin:0 auto;"><img src="images/04-ohdio-campagne.jpg" alt="Résultat d'atelier IA — pitch de campagne ICI Musique Ohdio, produit par l'équipe créative de Radio-Canada" width="1200" height="1600" loading="lazy"></div>
       </div>
     </div>
-  </div>
+  </section>
 
 
   <div class="container"><div class="divider"></div></div>
 
 
   <!-- SCEPTIQUES -->
-  <div class="container section">
+  <section class="container section">
     <div class="accent-label" style="color:var(--t4);">Si vous deviez convaincre un collègue sceptique…</div>
-    <h2 class="col-title" style="margin-bottom:32px;">Ce qu'ils diraient.</h2>
+    <h2 class="col-title" style="margin-bottom:32px;">Leurs mots, pas les nôtres.</h2>
     <div class="sceptic-grid">
       <div class="sceptic-card"><div><div class="sc-text">« Attache ta tuque. »</div><div class="sc-attr">— Participant anonyme</div></div></div>
       <div class="sceptic-card"><div><div class="sc-text">« Vas-y, c'est important. Comprendre comment ça fonctionne pour en avoir moins peur. »</div><div class="sc-attr">— Participant anonyme</div></div></div>
@@ -529,46 +574,49 @@
       <div class="sceptic-card"><div><div class="sc-text">« Essaies-le. »</div><div class="sc-attr">— Participant anonyme</div></div></div>
       <div class="sceptic-card wide"><div><div class="sc-text">« On pousse la réflexion beaucoup plus loin que les idées préconçues. »</div><div class="sc-attr">— Participant anonyme</div></div></div>
     </div>
-  </div>
+  </section>
 
 
   <div class="container"><div class="divider"></div></div>
 
 
   <!-- INSIGHT CLÉ -->
-  <div class="container section">
+  <section class="container section">
     <div class="insight-block">
       <div class="accent-label gt">L'insight clé</div>
       <h2 class="insight-title">Quand on donne à des professionnels créatifs la permission d'expérimenter, ils n'apprennent pas juste des outils. <span class="gt">Ils réimaginent leur façon de travailler.</span></h2>
       <p class="insight-sub">Et les sceptiques? Ils deviennent les participants les plus engagés.</p>
     </div>
-  </div>
+  </section>
 
 
   <div class="container"><div class="divider"></div></div>
 
 
   <!-- CTA -->
-  <div class="container section">
+  <section class="container section">
     <div class="cta-block">
       <h2 class="cta-title">Envie de bâtir quelque chose de similaire?</h2>
       <p class="cta-sub">Pas de pitch. Pas de pression. Juste une conversation.</p>
-      <a href="#" class="btn-primary">Commencer une conversation &#8594;</a>
+      <a href="#" class="btn-primary">Commencer une conversation <span aria-hidden="true">&#8594;</span></a>
     </div>
-  </div>
+  </section>
+
+  </article>
+  </main>
 
 
   <!-- FOOTER -->
-  <div class="container">
+  <footer class="container">
     <div class="footer">
       <span style="font-size:0.875rem;color:var(--t4);font-family:var(--font-mono);">© 2026 experimenting.ai</span>
-      <div class="footer-links">
+      <nav class="footer-links" aria-label="Liens secondaires">
         <a href="#">Lab</a>
         <a href="#">Services</a>
         <a href="#">Contact</a>
-      </div>
+      </nav>
     </div>
-  </div>
+  </footer>
 
 
 <script>
@@ -581,36 +629,40 @@
   });
 
   // Floating stat chips — per-chip proximity drift
-  const allChips = document.querySelectorAll('.float-stat');
-  const RADIUS = 200;   // px — activation zone around each chip
-  const STRENGTH = 8;   // px — max displacement
+  // Skip on touch devices and when reduced motion is preferred
+  const motionOK = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)').matches;
+  if (motionOK) {
+    const allChips = document.querySelectorAll('.float-stat');
+    const RADIUS = 200;   // px — activation zone around each chip
+    const STRENGTH = 8;   // px — max displacement
 
-  let raf;
-  document.addEventListener('mousemove', (e) => {
-    if (raf) cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(() => {
-      allChips.forEach(chip => {
-        const rect = chip.getBoundingClientRect();
-        const cx = rect.left + rect.width / 2;
-        const cy = rect.top + rect.height / 2;
-        const dx = e.clientX - cx;
-        const dy = e.clientY - cy;
-        const dist = Math.sqrt(dx * dx + dy * dy);
+    let raf;
+    document.addEventListener('mousemove', (e) => {
+      if (raf) cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        allChips.forEach(chip => {
+          const rect = chip.getBoundingClientRect();
+          const cx = rect.left + rect.width / 2;
+          const cy = rect.top + rect.height / 2;
+          const dx = e.clientX - cx;
+          const dy = e.clientY - cy;
+          const dist = Math.sqrt(dx * dx + dy * dy);
 
-        if (dist < RADIUS) {
-          const factor = 1 - dist / RADIUS;             // 1 at center, 0 at edge
-          const ease = factor * factor;                  // quadratic falloff
-          const tx = -(dx / dist) * ease * STRENGTH;     // push away from cursor
-          const ty = -(dy / dist) * ease * STRENGTH;
-          chip.style.transition = 'transform 0.15s ease-out';
-          chip.style.transform = `translate(${tx.toFixed(1)}px, ${ty.toFixed(1)}px)`;
-        } else {
-          chip.style.transition = 'transform 0.5s ease';
-          chip.style.transform = 'translate(0, 0)';
-        }
+          if (dist < RADIUS) {
+            const factor = 1 - dist / RADIUS;             // 1 at center, 0 at edge
+            const ease = factor * factor;                  // quadratic falloff
+            const tx = -(dx / dist) * ease * STRENGTH;     // push away from cursor
+            const ty = -(dy / dist) * ease * STRENGTH;
+            chip.style.transition = 'transform 0.15s ease-out';
+            chip.style.transform = `translate(${tx.toFixed(1)}px, ${ty.toFixed(1)}px)`;
+          } else {
+            chip.style.transition = 'transform 0.5s ease';
+            chip.style.transform = 'translate(0, 0)';
+          }
+        });
       });
     });
-  });
+  }
 </script>
 </body>
 </html>
